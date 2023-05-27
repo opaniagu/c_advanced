@@ -42,20 +42,35 @@ int main(void)
     if (resultado != EXIT_SUCCESS)
         printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
 
+    tarea.id = 3;
     resultado = buffer_create(&buffer, &tarea);
     if (resultado != EXIT_SUCCESS)
         printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
 
+    tarea.id = 4;
     resultado = buffer_create(&buffer, &tarea); // se descarta, buffer full
     if (resultado != EXIT_SUCCESS)
         printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
 
+    tarea.id = 5;
     resultado = buffer_create(&buffer, &tarea); // se descarta, buffer full
     if (resultado != EXIT_SUCCESS)
         printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
 
     // muestro la lista de tarea
     buffer_dump(&buffer);
+
+    // test read(find)
+    todo_t task;
+    int found;
+
+    found = buffer_read(&buffer, &task, 2);
+    if (found)
+    {
+        // imprimo
+        // fprintf(stderr, "(%d|%s|%d)\n", task.id, task.title, task.complete);
+        todo_print(&task);
+    }
 
     // libero el buffer
     buffer_destroy(&buffer);

@@ -14,14 +14,17 @@
 
 all: bin/main
 
-bin/main: build/main.o build/buffer.o
-	gcc -Wall build/main.o build/buffer.o -o bin/main
+bin/main: build/main.o build/buffer.o build/todo.o
+	gcc -Wall build/main.o build/buffer.o build/todo.o -o bin/main
 
 build/main.o: src/main.c
 	gcc -Wall -Iinclude -c src/main.c -o build/main.o
 
 build/buffer.o: src/buffer.c
 	gcc -Wall -Iinclude -c src/buffer.c -o build/buffer.o
+
+build/todo.o: src/todo.c
+	gcc -Wall -Iinclude -c src/todo.c -o build/todo.o
 
 run:
 # el @ para que no muestre por pantalla el comando a ejecutar

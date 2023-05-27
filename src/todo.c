@@ -1,5 +1,6 @@
-#include <todo.h>
+#include "todo.h"
 
-// version con array dinamico
-
-// CRUD = create read update delete
+void todo_print(todo_t *task)
+{
+    fprintf(stderr, "(%d|%s|%d)\n", task->id, task->title, task->complete);
+}
