@@ -35,4 +35,6 @@ void buffer_dump(buffer_t *);
 // CRUD
 int buffer_create(buffer_t *, todo_t *);
 
+int buffer_read(buffer_t *, todo_t *, int);
+
 #endif

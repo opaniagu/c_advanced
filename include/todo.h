@@ -1,6 +1,8 @@
 #ifndef TODO_H
 #define TODO_H
 
+#include <stdio.h>
+
 #define TRUE 1
 #define FALSE 0
 
@@ -12,5 +14,7 @@ typedef struct todo
     char title[TITLE_LEN];
     int complete;
 } todo_t;
+
+void todo_print(todo_t *task);
 
 #endif

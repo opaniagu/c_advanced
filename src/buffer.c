@@ -40,6 +40,20 @@ void buffer_dump(buffer_t *buffer)
     fprintf(stderr, "--------------------------\n");
 }
 
+// util
+void bool_to_str(int value_int, char *value_str)
+{
+    if (value_int == TRUE)
+        strcpy(value_str, "true");
+    // cualquier otro valor, false
+    else
+    {
+        strcpy(value_str, "false");
+    }
+}
+
+// == CRUD  ==
+
 // creo un elemento y lo inserto al final del array
 int buffer_create(buffer_t *buffer, todo_t *task)
 {
@@ -52,14 +66,22 @@ int buffer_create(buffer_t *buffer, todo_t *task)
     return EXIT_FAILURE;
 }
 
-// util
-void bool_to_str(int value_int, char *value_str)
+// lectura de un elemento por 'id' (find)
+// supongo que el id es unico (por ahora no hay ninguna restriccion, luego la incluiremos)
+int buffer_read(buffer_t *buffer, todo_t *task, int id)
 {
-    if (value_int == TRUE)
-        strcpy(value_str, "true");
-    // cualquier otro valor, false
-    else
+    int i;
+
+    for (i = 0; i < buffer->size; i++)
     {
-        strcpy(value_str, "false");
+        if (buffer->array[i].id == id)
+        {
+            // copio la tarea
+            task->id = buffer->array[i].id;
+            strcpy(task->title, buffer->array[i].title);
+            task->complete = buffer->array[i].complete;
+            return TRUE;
+        }
     }
+    return FALSE;
 }
