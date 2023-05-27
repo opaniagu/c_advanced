@@ -1,6 +1,12 @@
 # c_advanced
 Proyecto del Curso Avanzado de C
 
+
+## version 0.0.3
+
+[x] Makefile c/variables y generica
+
+
 ## version 0.0.2
 
 [x] TODO CRUD buffer_read() (find byd id)

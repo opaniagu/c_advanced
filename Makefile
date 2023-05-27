@@ -1,38 +1,29 @@
-# desde la linea de comandos, ejecutar:
-# $ make target 
-# por default busca el archivo Makefile
-# se puede especificar con -f <makefile>
-# make -f Makefile
-# make -f mi_makefile
+CC = gcc
+CFLAGS = -Wall -Wextra -g
+SOURCE_DIR = src
+INCLUDE_DIR = include
+BUILD_DIR = build
+BINARY_DIR = bin
+BINARY_NAME = main
 
-# target: prerequisites
-# 	command
-# 	command
-# 	command
+SOURCES = $(wildcard $(SOURCE_DIR)/*.c)
+OBJECTS = $(patsubst $(SOURCE_DIR)/%.c,$(BUILD_DIR)/%.o,$(SOURCES))
+BINARY = $(BINARY_DIR)/$(BINARY_NAME)
 
-# target y prerequisites son archivos
+all: $(BINARY)
 
-all: bin/main
+$(BINARY): $(OBJECTS)
+	$(CC) $(CFLAGS) -I$(INCLUDE_DIR) $(OBJECTS) -o $(BINARY)
 
-bin/main: build/main.o build/buffer.o build/todo.o
-	gcc -Wall build/main.o build/buffer.o build/todo.o -o bin/main
-
-build/main.o: src/main.c
-	gcc -Wall -Iinclude -c src/main.c -o build/main.o
-
-build/buffer.o: src/buffer.c
-	gcc -Wall -Iinclude -c src/buffer.c -o build/buffer.o
-
-build/todo.o: src/todo.c
-	gcc -Wall -Iinclude -c src/todo.c -o build/todo.o
+$(BUILD_DIR)/%.o: $(SOURCE_DIR)/%.c
+	$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -c -o $@ $<
 
 run:
 # el @ para que no muestre por pantalla el comando a ejecutar
-	@./bin/main
+	@./$(BINARY)
 
 clean: 
-	rm -f ./build/*.o
-	rm -f ./bin/main
+	rm -f $(OBJECTS) $(BINARY)
 
 # le dice al make que estos nombres no son archivos
 .PHONY: all run clean
