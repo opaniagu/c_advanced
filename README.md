@@ -2,6 +2,11 @@
 Proyecto del Curso Avanzado de C
 
 
+## version 0.0.4
+
+[x] CRUD update, delete
+
+
 ## version 0.0.3
 
 [x] Makefile c/variables y generica
@@ -9,7 +14,7 @@ Proyecto del Curso Avanzado de C
 
 ## version 0.0.2
 
-[x] TODO CRUD buffer_read() (find byd id)
+[x] TODO CRUD buffer_read() (find by id)
 
 [x] todo_print()
 

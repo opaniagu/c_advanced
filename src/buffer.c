@@ -85,3 +85,83 @@ int buffer_read(buffer_t *buffer, todo_t *task, int id)
     }
     return FALSE;
 }
+
+// el id no haria falta enviar....lo podria leer desde task!
+int buffer_update(buffer_t *buffer, todo_t *task, int id)
+{
+    // int i;
+    int index = -1;
+
+    // busco el id
+    // for (i = 0; i < buffer->size; i++)
+    // {
+    //     if (buffer->array[i].id == id)
+    //     {
+    //         index = i;
+    //         break;
+    //     }
+    // }
+    index = buffer_task_id_found(buffer, id);
+    if (index > 0)
+    {
+        // actualizo, el id no hace falta actualizar
+        strcpy(buffer->array[index].title, task->title);
+        buffer->array[index].complete = task->complete;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+int buffer_delete(buffer_t *buffer, int id)
+{
+    int i;
+    int index = -1;
+
+    // 1) verificar que id sea un valor valido
+    if (id < 0 || id > buffer->size)
+    {
+        printf("Posicion ingresada no valida\n");
+        return EXIT_FAILURE;
+    }
+
+    // 2) con el id, tengo que buscar la posicion en el array
+    // for (i = 0; i < buffer->size; i++)
+    // {
+    //     if (buffer->array[i].id == id)
+    //     {
+    //         index = i;
+    //         break;
+    //     }
+    // }
+    index = buffer_task_id_found(buffer, id);
+    if (index < 0)
+    {
+        return EXIT_FAILURE;
+    }
+
+    // 3) desplazo a la izquierda desde la posicion indicada
+    for (i = index; i < buffer->size - 1; i++)
+    {
+        // en C con las estructuras se puede utilizar el operador de asignacion (=)
+        buffer->array[i] = buffer->array[i + 1];
+    }
+
+    // 4) Actualizar el tamaño del array
+    buffer->size--;
+    return EXIT_SUCCESS;
+}
+
+int buffer_task_id_found(buffer_t *buffer, int id)
+{
+    int i, index;
+
+    for (i = 0; i < buffer->size; i++)
+    {
+        if (buffer->array[i].id == id)
+        {
+            index = i;
+            break;
+        }
+    }
+    return index;
+}

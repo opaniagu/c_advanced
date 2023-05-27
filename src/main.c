@@ -67,10 +67,22 @@ int main(void)
     found = buffer_read(&buffer, &task, 2);
     if (found)
     {
-        // imprimo
-        // fprintf(stderr, "(%d|%s|%d)\n", task.id, task.title, task.complete);
         todo_print(&task);
     }
+
+    // realizo un update
+    task.complete = FALSE;
+    strcpy(task.title, "Tarea #3");
+    found = buffer_update(&buffer, &task, 3);
+    if (found)
+    {
+        todo_print(&task);
+    }
+
+    // elimino id=2
+    buffer_dump(&buffer);
+    buffer_delete(&buffer, 2);
+    buffer_dump(&buffer);
 
     // libero el buffer
     buffer_destroy(&buffer);

@@ -33,8 +33,15 @@ void buffer_destroy(buffer_t *);
 void buffer_dump(buffer_t *);
 
 // CRUD
+
 int buffer_create(buffer_t *, todo_t *);
 
 int buffer_read(buffer_t *, todo_t *, int);
+
+int buffer_update(buffer_t *, todo_t *, int);
+
+int buffer_delete(buffer_t *, int);
+
+int buffer_task_id_found(buffer_t *, int);
 
 #endif
