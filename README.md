@@ -4,8 +4,11 @@ Proyecto del Curso Avanzado de C
 ## version 0.0.2
 
 [x] TODO CRUD buffer_read() (find byd id)
+
 [x] todo_print()
+
 [x] update Makefile
+
 
 
 ## version 0.0.1
