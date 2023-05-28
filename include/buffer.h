@@ -50,9 +50,9 @@ int buffer_item_id_found(buffer_t *, int);
 
 // archivos
 
-void save(buffer_t *);
+void save(buffer_t *, char *);
 
-void load(buffer_t *);
+void load(buffer_t *, char *);
 
 void import(buffer_t *buffer);
 

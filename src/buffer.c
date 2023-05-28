@@ -163,11 +163,12 @@ int buffer_item_id_found(buffer_t *buffer, int id)
 
 // under testing
 
-void save(buffer_t *buffer)
+void save(buffer_t *buffer, char *filename)
 {
     FILE *fp;
 
-    fp = fopen("c_advanced.db", "w");
+    // fp = fopen("c_advanced.db", "w");
+    fp = fopen(filename, "w");
 
     // no guardo todo el array('capacity'), solo los registros cargados('size')
     fwrite(buffer->array, (buffer->size) * sizeof(data_t), 1, fp);
@@ -175,13 +176,14 @@ void save(buffer_t *buffer)
     fclose(fp);
 }
 
-void load(buffer_t *buffer)
+void load(buffer_t *buffer, char *filename)
 {
     FILE *fp;
     int tamano;
     int q;
 
-    fp = fopen("c_advanced.db", "r");
+    // fp = fopen("c_advanced.db", "r");
+    fp = fopen(filename, "r");
     if (fp == NULL)
     {
         printf("Error al abrir el archivo\n");

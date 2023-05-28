@@ -13,6 +13,11 @@ int main(void)
 
     printf("Bienvenidos al curso C Avanzado!\n");
 
+    // configuracion de la app
+    config_t config;
+    config_init(&config);
+    config_print(&config);
+
     // test de las apis de 'buffer'
     buffer_t buffer;
 
@@ -24,7 +29,8 @@ int main(void)
         .complete = FALSE,
     };
 
-    if (buffer_init(&buffer, BUFFER_LEN))
+    // if (buffer_init(&buffer, BUFFER_LEN))
+    if (buffer_init(&buffer, config.database_size))
     {
         printf("Error en la creacion del buffer\n");
         return -1;
@@ -35,7 +41,7 @@ int main(void)
     //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
 
     // test de 'load' de la base de daos (bin)
-    load(&buffer);
+    load(&buffer, config.database_name);
 
     // import
     import(&buffer);
@@ -43,7 +49,7 @@ int main(void)
     buffer_dump(&buffer);
 
     // test de 'save'
-    save(&buffer);
+    save(&buffer, config.database_name);
 
     // creo una nueva tarea, reutilizo estructura 'tarea'
     // tarea.id = 2;

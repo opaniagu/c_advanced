@@ -6,5 +6,6 @@
 
 #include "data.h"
 #include "buffer.h"
+#include "config.h"
 
 #endif
