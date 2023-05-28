@@ -3,7 +3,7 @@
 int buffer_init(buffer_t *buffer, int capacity)
 {
     // create dynamic array
-    buffer->array = malloc(capacity * sizeof(data_t));
+    buffer->array = malloc(capacity * sizeof(todo_t));
 
     // check malloc
     if (buffer->array == NULL)
@@ -33,8 +33,14 @@ void buffer_dump(buffer_t *buffer)
 
     for (i = 0; i < buffer->size; i++)
     {
+        // para poder imprimir 'true' o 'false', en vez de 0 o 1
+        // bool_to_str(buffer->array[i].complete, complete_bool_str);
+        // fprintf(stderr, "buffer[%d]: (%d|%s|%s)\n", i, buffer->array[i].id, buffer->array[i].title, complete_bool_str);
         fprintf(stderr, "buffer[%d]: ", i);
-        imprimir_estructura(&buffer->array[i], data_print_ptr);
+        // todo_print(&buffer->array[i]);
+        // utilizo puntero a funcion para imprimir la estructura
+        // y que sea aun mas generica la implementacion de 'buffer'
+        imprimir_estructura(&buffer->array[i], todo_print_ptr);
     }
     fprintf(stderr, "--------------------------\n");
 }
@@ -42,14 +48,12 @@ void buffer_dump(buffer_t *buffer)
 // == CRUD  ==
 
 // creo un elemento y lo inserto al final del array
-// en 'size' tengo la ultima posicion
-int buffer_create(buffer_t *buffer, void *item, pointer_func_asignar_t asignar)
+// en 'size' etngo la ultima posicion
+int buffer_create(buffer_t *buffer, todo_t *task)
 {
     if (buffer->size < buffer->capacity)
     {
-        // buffer->array[buffer->size] = *item;
-        asignar(&(buffer->array[buffer->size]), item);
-
+        buffer->array[buffer->size] = *task;
         buffer->size++;
         return EXIT_SUCCESS;
     }
@@ -58,7 +62,7 @@ int buffer_create(buffer_t *buffer, void *item, pointer_func_asignar_t asignar)
 
 // lectura de un elemento por 'id' (find)
 // supongo que el id es unico (por ahora no hay ninguna restriccion, luego la incluiremos)
-int buffer_read(buffer_t *buffer, data_t *item, int id)
+int buffer_read(buffer_t *buffer, todo_t *task, int id)
 {
     int i;
 
@@ -67,10 +71,10 @@ int buffer_read(buffer_t *buffer, data_t *item, int id)
         if (buffer->array[i].id == id)
         {
             // copio la tarea
-            // item->id = buffer->array[i].id;
-            // strcpy(item->title, buffer->array[i].title);
-            // item->complete = buffer->array[i].complete;
-            *item = buffer->array[i];
+            // task->id = buffer->array[i].id;
+            // strcpy(task->title, buffer->array[i].title);
+            // task->complete = buffer->array[i].complete;
+            *task = buffer->array[i];
 
             return TRUE;
         }
@@ -78,8 +82,8 @@ int buffer_read(buffer_t *buffer, data_t *item, int id)
     return FALSE;
 }
 
-// el id no haria falta enviar....lo podria leer desde item!
-int buffer_update(buffer_t *buffer, data_t *item, int id)
+// el id no haria falta enviar....lo podria leer desde task!
+int buffer_update(buffer_t *buffer, todo_t *task, int id)
 {
     // int i;
     int index = -1;
@@ -93,14 +97,14 @@ int buffer_update(buffer_t *buffer, data_t *item, int id)
     //         break;
     //     }
     // }
-    index = buffer_item_id_found(buffer, id);
+    index = buffer_task_id_found(buffer, id);
     if (index > 0)
     {
         // actualizo, el id no hace falta actualizar
-        // strcpy(buffer->array[index].title, item->title);
-        // buffer->array[index].complete = item->complete;
+        // strcpy(buffer->array[index].title, task->title);
+        // buffer->array[index].complete = task->complete;
 
-        buffer->array[index] = *item; // copio la estructura
+        buffer->array[index] = *task; // copio la estructura
 
         return TRUE;
     }
@@ -128,7 +132,7 @@ int buffer_delete(buffer_t *buffer, int id)
     //         break;
     //     }
     // }
-    index = buffer_item_id_found(buffer, id);
+    index = buffer_task_id_found(buffer, id);
     if (index < 0)
     {
         return EXIT_FAILURE;
@@ -146,7 +150,7 @@ int buffer_delete(buffer_t *buffer, int id)
     return EXIT_SUCCESS;
 }
 
-int buffer_item_id_found(buffer_t *buffer, int id)
+int buffer_task_id_found(buffer_t *buffer, int id)
 {
     int i, index;
 

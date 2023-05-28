@@ -18,7 +18,7 @@ int main(void)
 
     // forma de declarar e inicializar uns struct indicando .campo
     // ojo que si la estructura ya esta declarada, no se peude igualar un str!
-    todo_t tarea = {
+    data_t tarea = {
         .id = 1,
         .title = "Tarea #1",
         .complete = FALSE,
@@ -30,44 +30,44 @@ int main(void)
         return -1;
     }
 
-    resultado = buffer_create(&buffer, &tarea);
+    resultado = buffer_create(&buffer, &tarea, asign_data);
     if (resultado != EXIT_SUCCESS)
         printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
 
     // creo una nueva tarea, reutilizo estructura 'tarea'
-    tarea.id = 2;
-    strcpy(tarea.title, "Tarea #2");
-    tarea.complete = TRUE;
-    resultado = buffer_create(&buffer, &tarea);
-    if (resultado != EXIT_SUCCESS)
-        printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
+    // tarea.id = 2;
+    // strcpy(tarea.title, "Tarea #2");
+    // tarea.complete = TRUE;
+    // resultado = buffer_create(&buffer, &tarea);
+    // if (resultado != EXIT_SUCCESS)
+    //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
 
-    tarea.id = 3;
-    resultado = buffer_create(&buffer, &tarea);
-    if (resultado != EXIT_SUCCESS)
-        printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
+    // tarea.id = 3;
+    // resultado = buffer_create(&buffer, &tarea);
+    // if (resultado != EXIT_SUCCESS)
+    //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
 
-    tarea.id = 4;
-    resultado = buffer_create(&buffer, &tarea); // se descarta, buffer full
-    if (resultado != EXIT_SUCCESS)
-        printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
+    // tarea.id = 4;
+    // resultado = buffer_create(&buffer, &tarea); // se descarta, buffer full
+    // if (resultado != EXIT_SUCCESS)
+    //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
 
-    tarea.id = 5;
-    resultado = buffer_create(&buffer, &tarea); // se descarta, buffer full
-    if (resultado != EXIT_SUCCESS)
-        printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
+    // tarea.id = 5;
+    // resultado = buffer_create(&buffer, &tarea); // se descarta, buffer full
+    // if (resultado != EXIT_SUCCESS)
+    //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
 
     // muestro la lista de tarea
     buffer_dump(&buffer);
 
     // test read(find)
-    todo_t task;
+    data_t task;
     int found;
 
     found = buffer_read(&buffer, &task, 2);
     if (found)
     {
-        todo_print(&task);
+        data_print(&task);
     }
 
     // realizo un update
@@ -76,7 +76,7 @@ int main(void)
     found = buffer_update(&buffer, &task, 3);
     if (found)
     {
-        todo_print(&task);
+        data_print(&task);
     }
 
     // elimino id=2
