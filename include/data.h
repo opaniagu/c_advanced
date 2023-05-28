@@ -8,10 +8,10 @@
 
 typedef struct data
 {
-    int id;
-    char title[TITLE_LEN];
-    int complete;
-} data_t;
+    int id;                // 4 bytes
+    char title[TITLE_LEN]; // 128 bytes
+    int complete;          // 4 bytes
+} data_t;                  // 136 bytes
 
 // funcion que imprime la estructura
 void data_print(data_t *data);

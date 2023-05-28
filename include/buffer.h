@@ -12,9 +12,9 @@ void bool_to_str(int value_int, char *value_str);
 
 typedef struct
 {
-    data_t *array;
-    int capacity;
-    int size;
+    data_t *array; // n * 136 bytes
+    int capacity;  // 4 bytes
+    int size;      // 4 bytes
 } buffer_t;
 
 /**
@@ -44,5 +44,11 @@ int buffer_update(buffer_t *, data_t *, int);
 int buffer_delete(buffer_t *, int);
 
 int buffer_item_id_found(buffer_t *, int);
+
+// archivos
+
+void save(buffer_t *);
+
+void load(buffer_t *);
 
 #endif

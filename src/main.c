@@ -30,9 +30,15 @@ int main(void)
         return -1;
     }
 
-    resultado = buffer_create(&buffer, &tarea, asign_data);
-    if (resultado != EXIT_SUCCESS)
-        printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
+    // resultado = buffer_create(&buffer, &tarea, asign_data);
+    // if (resultado != EXIT_SUCCESS)
+    //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
+
+    // test de 'save'
+    // save(&buffer);
+
+    // test de 'load'
+    load(&buffer);
 
     // creo una nueva tarea, reutilizo estructura 'tarea'
     // tarea.id = 2;

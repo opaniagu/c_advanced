@@ -160,3 +160,48 @@ int buffer_item_id_found(buffer_t *buffer, int id)
     }
     return index;
 }
+
+// under testing
+
+void save(buffer_t *buffer)
+{
+    FILE *fp;
+
+    fp = fopen("c_advanced.db", "w");
+
+    // no guardo todo el array('capacity'), solo los registros cargados('size')
+    fwrite(buffer->array, (buffer->size) * sizeof(data_t), 1, fp);
+
+    fclose(fp);
+}
+
+void load(buffer_t *buffer)
+{
+    FILE *fp;
+    int tamano;
+    int q;
+
+    fp = fopen("c_advanced.db", "r");
+    if (fp == NULL)
+    {
+        printf("error al abrir el archivo");
+        exit(0);
+    }
+
+    fseek(fp, 0, SEEK_END);      // Mover el puntero de posición al final del archivo
+    tamano = ftell(fp);          // Obtener la posición actual del puntero de posición (que es el tamaño del archivo)
+    q = tamano / sizeof(data_t); // cantidad de registros en el archivo
+    if (q > buffer->capacity)    // si la cantidad de registros es mayor a la capacidad, trunco
+    {
+        q = buffer->capacity;
+        tamano = q * sizeof(data_t);
+        // emito un warning, mas adelante lo puedo enviar a un syslog
+        fprintf(stderr, "Se intento cargar una base de datos con mas registros de la capacidad\n");
+    }
+
+    fseek(fp, 0, SEEK_SET); // Mover el puntero de posición al inicio del archivo
+    fread(buffer->array, tamano, 1, fp);
+    buffer->size = q;
+
+    fclose(fp);
+}
