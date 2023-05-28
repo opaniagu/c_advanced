@@ -25,7 +25,7 @@ void buffer_destroy(buffer_t *buffer)
 void buffer_dump(buffer_t *buffer)
 {
     int i;
-    char complete_bool_str[6];
+    // char complete_bool_str[6];
 
     fprintf(stderr, "\n---- bounded buffer ---\n");
     fprintf(stderr, "size: %d\n", buffer->size);
@@ -34,22 +34,15 @@ void buffer_dump(buffer_t *buffer)
     for (i = 0; i < buffer->size; i++)
     {
         // para poder imprimir 'true' o 'false', en vez de 0 o 1
-        bool_to_str(buffer->array[i].complete, complete_bool_str);
-        fprintf(stderr, "buffer[%d]: (%d|%s|%s)\n", i, buffer->array[i].id, buffer->array[i].title, complete_bool_str);
+        // bool_to_str(buffer->array[i].complete, complete_bool_str);
+        // fprintf(stderr, "buffer[%d]: (%d|%s|%s)\n", i, buffer->array[i].id, buffer->array[i].title, complete_bool_str);
+        fprintf(stderr, "buffer[%d]: ", i);
+        // todo_print(&buffer->array[i]);
+        // utilizo puntero a funcion para imprimir la estructura
+        // y que sea aun mas generica la implementacion de 'buffer'
+        imprimir_estructura(&buffer->array[i], todo_print_ptr);
     }
     fprintf(stderr, "--------------------------\n");
-}
-
-// util
-void bool_to_str(int value_int, char *value_str)
-{
-    if (value_int == TRUE)
-        strcpy(value_str, "true");
-    // cualquier otro valor, false
-    else
-    {
-        strcpy(value_str, "false");
-    }
 }
 
 // == CRUD  ==
@@ -77,9 +70,11 @@ int buffer_read(buffer_t *buffer, todo_t *task, int id)
         if (buffer->array[i].id == id)
         {
             // copio la tarea
-            task->id = buffer->array[i].id;
-            strcpy(task->title, buffer->array[i].title);
-            task->complete = buffer->array[i].complete;
+            // task->id = buffer->array[i].id;
+            // strcpy(task->title, buffer->array[i].title);
+            // task->complete = buffer->array[i].complete;
+            *task = buffer->array[i];
+
             return TRUE;
         }
     }
@@ -105,8 +100,11 @@ int buffer_update(buffer_t *buffer, todo_t *task, int id)
     if (index > 0)
     {
         // actualizo, el id no hace falta actualizar
-        strcpy(buffer->array[index].title, task->title);
-        buffer->array[index].complete = task->complete;
+        // strcpy(buffer->array[index].title, task->title);
+        // buffer->array[index].complete = task->complete;
+
+        buffer->array[index] = *task; // copio la estructura
+
         return TRUE;
     }
     return FALSE;

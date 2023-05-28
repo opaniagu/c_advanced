@@ -6,6 +6,7 @@
 #include <string.h> // strcpy
 
 #include "todo.h"
+#include "util.h"
 
 void bool_to_str(int value_int, char *value_str);
 
