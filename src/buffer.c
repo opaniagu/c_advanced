@@ -184,8 +184,8 @@ void load(buffer_t *buffer)
     fp = fopen("c_advanced.db", "r");
     if (fp == NULL)
     {
-        printf("error al abrir el archivo");
-        exit(0);
+        printf("Error al abrir el archivo\n");
+        exit(-1);
     }
 
     fseek(fp, 0, SEEK_END);      // Mover el puntero de posición al final del archivo
@@ -204,4 +204,41 @@ void load(buffer_t *buffer)
     buffer->size = q;
 
     fclose(fp);
+}
+
+// import desde un archivo .csv
+// (1) generar mock de datos
+// https://www.mockaroo.com/
+void import(buffer_t *buffer)
+{
+    FILE *file;
+    char str[FILE_LINE_LEN];
+    int numLeidos;
+    data_t data;
+
+    // abro el archivo
+    file = fopen(FILE_CSV, "r");
+    if (file == NULL)
+    {
+        printf("Arhivo csv no encontrado\n");
+        exit(-1);
+    }
+
+    // proceso el archivo
+    // fgets lee de a lineas, hasta encontrar 'newline' o
+    // un fin de archivo 'EOF' o el tamaño maximo especificado
+
+    while (fgets(str, FILE_LINE_LEN, file) != NULL)
+    {
+        // string_to_struct(str, &p);
+        numLeidos = sscanf(str, "%d,%128[^,],%d", &data.id, data.title, &data.complete);
+        if (numLeidos > 0)
+        {
+            // printf("title: %s\n", data.title);
+            buffer_create(buffer, &data, asign_data);
+        }
+    }
+
+    // cierro el archivo
+    fclose(file);
 }

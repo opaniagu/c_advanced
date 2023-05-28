@@ -1,0 +1,1001 @@
+id,title,complete
+1,Research topic,0
+2,Write blog post,0
+3,Send email,1
+4,Schedule meeting,1
+5,Prepare presentation,0
+6,Update website,0
+7,Research topic,1
+8,Research topic,0
+9,Research topic,0
+10,Update website,0
+11,Prepare presentation,1
+12,Write blog post,0
+13,Schedule meeting,1
+14,Research topic,0
+15,Write blog post,0
+16,Update website,0
+17,Write blog post,1
+18,Research topic,0
+19,Prepare presentation,0
+20,Research topic,0
+21,Prepare presentation,1
+22,Update website,0
+23,Write blog post,0
+24,Finish report,0
+25,Update website,0
+26,Attend conference,0
+27,Buy groceries,0
+28,Update website,0
+29,Prepare presentation,1
+30,Buy groceries,0
+31,Update website,1
+32,Finish report,0
+33,Attend conference,1
+34,Buy groceries,1
+35,Research topic,1
+36,Buy groceries,0
+37,Attend conference,1
+38,Attend conference,0
+39,Attend conference,0
+40,Prepare presentation,0
+41,Finish report,1
+42,Schedule meeting,0
+43,Finish report,1
+44,Call client,1
+45,Schedule meeting,1
+46,Prepare presentation,0
+47,Schedule meeting,0
+48,Call client,0
+49,Update website,0
+50,Attend conference,1
+51,Buy groceries,1
+52,Buy groceries,0
+53,Research topic,0
+54,Research topic,1
+55,Write blog post,0
+56,Send email,1
+57,Schedule meeting,0
+58,Call client,1
+59,Update website,0
+60,Buy groceries,0
+61,Send email,0
+62,Update website,0
+63,Send email,0
+64,Send email,0
+65,Write blog post,1
+66,Buy groceries,1
+67,Prepare presentation,0
+68,Prepare presentation,0
+69,Call client,1
+70,Schedule meeting,1
+71,Send email,1
+72,Schedule meeting,1
+73,Update website,0
+74,Prepare presentation,0
+75,Schedule meeting,1
+76,Update website,0
+77,Buy groceries,0
+78,Prepare presentation,1
+79,Finish report,1
+80,Call client,1
+81,Update website,1
+82,Write blog post,0
+83,Schedule meeting,0
+84,Schedule meeting,0
+85,Attend conference,1
+86,Send email,1
+87,Finish report,0
+88,Finish report,0
+89,Send email,0
+90,Update website,1
+91,Schedule meeting,1
+92,Call client,1
+93,Prepare presentation,1
+94,Write blog post,1
+95,Buy groceries,1
+96,Schedule meeting,0
+97,Call client,1
+98,Buy groceries,0
+99,Buy groceries,0
+100,Buy groceries,1
+101,Prepare presentation,1
+102,Write blog post,1
+103,Finish report,1
+104,Prepare presentation,1
+105,Finish report,0
+106,Schedule meeting,1
+107,Send email,0
+108,Schedule meeting,1
+109,Write blog post,0
+110,Attend conference,1
+111,Send email,0
+112,Call client,0
+113,Send email,1
+114,Schedule meeting,0
+115,Schedule meeting,1
+116,Prepare presentation,0
+117,Write blog post,1
+118,Send email,0
+119,Update website,1
+120,Prepare presentation,1
+121,Attend conference,1
+122,Write blog post,0
+123,Prepare presentation,1
+124,Call client,1
+125,Finish report,0
+126,Finish report,0
+127,Call client,0
+128,Send email,0
+129,Write blog post,0
+130,Call client,1
+131,Schedule meeting,0
+132,Finish report,1
+133,Update website,0
+134,Update website,1
+135,Update website,1
+136,Schedule meeting,1
+137,Schedule meeting,0
+138,Prepare presentation,1
+139,Write blog post,1
+140,Update website,1
+141,Prepare presentation,1
+142,Buy groceries,0
+143,Prepare presentation,0
+144,Research topic,0
+145,Finish report,0
+146,Finish report,1
+147,Finish report,1
+148,Send email,1
+149,Finish report,1
+150,Write blog post,0
+151,Prepare presentation,1
+152,Update website,1
+153,Finish report,1
+154,Send email,1
+155,Write blog post,1
+156,Attend conference,0
+157,Call client,1
+158,Call client,0
+159,Send email,1
+160,Write blog post,1
+161,Buy groceries,1
+162,Update website,1
+163,Send email,1
+164,Attend conference,0
+165,Send email,0
+166,Call client,1
+167,Prepare presentation,0
+168,Research topic,1
+169,Research topic,0
+170,Call client,0
+171,Finish report,0
+172,Schedule meeting,1
+173,Buy groceries,1
+174,Research topic,0
+175,Schedule meeting,1
+176,Schedule meeting,0
+177,Research topic,1
+178,Research topic,1
+179,Buy groceries,1
+180,Finish report,0
+181,Update website,1
+182,Attend conference,0
+183,Prepare presentation,1
+184,Update website,0
+185,Write blog post,0
+186,Schedule meeting,0
+187,Attend conference,1
+188,Attend conference,1
+189,Research topic,0
+190,Send email,1
+191,Call client,0
+192,Buy groceries,0
+193,Research topic,1
+194,Send email,0
+195,Buy groceries,1
+196,Write blog post,0
+197,Finish report,0
+198,Attend conference,1
+199,Buy groceries,1
+200,Prepare presentation,0
+201,Research topic,1
+202,Buy groceries,0
+203,Buy groceries,1
+204,Finish report,1
+205,Research topic,0
+206,Update website,0
+207,Finish report,1
+208,Send email,0
+209,Prepare presentation,0
+210,Prepare presentation,0
+211,Schedule meeting,1
+212,Send email,1
+213,Write blog post,1
+214,Update website,0
+215,Attend conference,0
+216,Call client,0
+217,Research topic,0
+218,Research topic,1
+219,Finish report,1
+220,Attend conference,0
+221,Research topic,1
+222,Write blog post,0
+223,Prepare presentation,1
+224,Buy groceries,1
+225,Buy groceries,1
+226,Research topic,0
+227,Send email,0
+228,Send email,1
+229,Send email,0
+230,Schedule meeting,1
+231,Send email,1
+232,Buy groceries,1
+233,Write blog post,0
+234,Send email,0
+235,Write blog post,0
+236,Buy groceries,0
+237,Buy groceries,0
+238,Schedule meeting,1
+239,Call client,1
+240,Write blog post,0
+241,Update website,1
+242,Buy groceries,1
+243,Call client,1
+244,Research topic,0
+245,Send email,1
+246,Finish report,1
+247,Research topic,1
+248,Prepare presentation,1
+249,Finish report,0
+250,Send email,1
+251,Research topic,0
+252,Schedule meeting,0
+253,Research topic,1
+254,Research topic,0
+255,Schedule meeting,0
+256,Send email,0
+257,Buy groceries,0
+258,Research topic,0
+259,Attend conference,0
+260,Update website,1
+261,Write blog post,1
+262,Schedule meeting,0
+263,Prepare presentation,1
+264,Attend conference,1
+265,Update website,1
+266,Research topic,1
+267,Send email,1
+268,Research topic,0
+269,Send email,0
+270,Research topic,0
+271,Send email,1
+272,Call client,0
+273,Finish report,1
+274,Research topic,1
+275,Buy groceries,0
+276,Schedule meeting,0
+277,Write blog post,0
+278,Attend conference,0
+279,Buy groceries,0
+280,Prepare presentation,0
+281,Write blog post,0
+282,Buy groceries,1
+283,Finish report,0
+284,Write blog post,1
+285,Research topic,1
+286,Schedule meeting,1
+287,Send email,0
+288,Attend conference,0
+289,Attend conference,0
+290,Prepare presentation,0
+291,Finish report,0
+292,Buy groceries,0
+293,Buy groceries,1
+294,Update website,0
+295,Update website,0
+296,Call client,0
+297,Schedule meeting,1
+298,Write blog post,0
+299,Finish report,0
+300,Prepare presentation,0
+301,Call client,0
+302,Send email,0
+303,Schedule meeting,0
+304,Attend conference,1
+305,Schedule meeting,1
+306,Finish report,0
+307,Attend conference,1
+308,Update website,0
+309,Update website,0
+310,Send email,1
+311,Buy groceries,0
+312,Research topic,0
+313,Finish report,0
+314,Finish report,1
+315,Attend conference,1
+316,Write blog post,1
+317,Buy groceries,1
+318,Write blog post,1
+319,Send email,0
+320,Research topic,1
+321,Write blog post,0
+322,Schedule meeting,1
+323,Finish report,1
+324,Send email,1
+325,Call client,1
+326,Prepare presentation,1
+327,Call client,1
+328,Call client,1
+329,Call client,0
+330,Prepare presentation,0
+331,Research topic,1
+332,Update website,1
+333,Research topic,1
+334,Send email,0
+335,Finish report,1
+336,Update website,1
+337,Research topic,1
+338,Attend conference,0
+339,Attend conference,0
+340,Prepare presentation,1
+341,Research topic,1
+342,Write blog post,0
+343,Attend conference,0
+344,Call client,0
+345,Attend conference,1
+346,Prepare presentation,0
+347,Attend conference,0
+348,Send email,0
+349,Attend conference,1
+350,Finish report,1
+351,Research topic,1
+352,Schedule meeting,0
+353,Write blog post,0
+354,Update website,0
+355,Buy groceries,0
+356,Finish report,1
+357,Finish report,1
+358,Buy groceries,1
+359,Schedule meeting,1
+360,Call client,0
+361,Buy groceries,0
+362,Attend conference,1
+363,Write blog post,0
+364,Prepare presentation,1
+365,Buy groceries,0
+366,Buy groceries,1
+367,Finish report,1
+368,Attend conference,0
+369,Schedule meeting,1
+370,Attend conference,1
+371,Send email,1
+372,Send email,0
+373,Schedule meeting,0
+374,Send email,1
+375,Schedule meeting,0
+376,Research topic,1
+377,Research topic,0
+378,Prepare presentation,0
+379,Finish report,0
+380,Send email,1
+381,Schedule meeting,1
+382,Update website,0
+383,Research topic,0
+384,Call client,0
+385,Buy groceries,0
+386,Attend conference,1
+387,Write blog post,1
+388,Schedule meeting,1
+389,Buy groceries,0
+390,Attend conference,1
+391,Buy groceries,1
+392,Call client,0
+393,Schedule meeting,0
+394,Prepare presentation,1
+395,Finish report,1
+396,Attend conference,1
+397,Schedule meeting,0
+398,Finish report,0
+399,Attend conference,1
+400,Prepare presentation,0
+401,Update website,0
+402,Send email,1
+403,Attend conference,1
+404,Prepare presentation,1
+405,Update website,0
+406,Research topic,1
+407,Finish report,1
+408,Prepare presentation,0
+409,Call client,0
+410,Write blog post,0
+411,Update website,0
+412,Schedule meeting,1
+413,Update website,1
+414,Attend conference,1
+415,Buy groceries,0
+416,Attend conference,1
+417,Research topic,0
+418,Attend conference,0
+419,Send email,0
+420,Buy groceries,0
+421,Attend conference,0
+422,Send email,0
+423,Call client,0
+424,Attend conference,0
+425,Send email,1
+426,Buy groceries,0
+427,Send email,0
+428,Finish report,1
+429,Update website,1
+430,Call client,0
+431,Prepare presentation,0
+432,Finish report,1
+433,Write blog post,1
+434,Finish report,0
+435,Research topic,1
+436,Buy groceries,0
+437,Write blog post,1
+438,Attend conference,1
+439,Call client,1
+440,Write blog post,0
+441,Send email,1
+442,Call client,0
+443,Write blog post,0
+444,Write blog post,0
+445,Write blog post,1
+446,Finish report,0
+447,Write blog post,0
+448,Write blog post,0
+449,Finish report,0
+450,Research topic,0
+451,Call client,0
+452,Research topic,0
+453,Update website,1
+454,Prepare presentation,1
+455,Attend conference,1
+456,Prepare presentation,1
+457,Buy groceries,1
+458,Update website,0
+459,Write blog post,0
+460,Schedule meeting,0
+461,Attend conference,1
+462,Call client,1
+463,Call client,0
+464,Schedule meeting,0
+465,Prepare presentation,1
+466,Call client,1
+467,Update website,0
+468,Finish report,0
+469,Attend conference,1
+470,Finish report,0
+471,Send email,0
+472,Write blog post,1
+473,Write blog post,1
+474,Schedule meeting,0
+475,Finish report,0
+476,Prepare presentation,1
+477,Schedule meeting,0
+478,Update website,1
+479,Update website,0
+480,Call client,0
+481,Research topic,1
+482,Send email,1
+483,Buy groceries,0
+484,Prepare presentation,0
+485,Write blog post,0
+486,Finish report,1
+487,Prepare presentation,0
+488,Update website,1
+489,Prepare presentation,1
+490,Call client,1
+491,Update website,0
+492,Call client,0
+493,Send email,1
+494,Research topic,1
+495,Schedule meeting,1
+496,Research topic,1
+497,Prepare presentation,1
+498,Update website,0
+499,Schedule meeting,0
+500,Buy groceries,0
+501,Schedule meeting,0
+502,Research topic,0
+503,Prepare presentation,1
+504,Prepare presentation,1
+505,Schedule meeting,1
+506,Write blog post,0
+507,Buy groceries,1
+508,Schedule meeting,0
+509,Prepare presentation,1
+510,Call client,0
+511,Update website,1
+512,Finish report,0
+513,Update website,0
+514,Prepare presentation,0
+515,Finish report,1
+516,Schedule meeting,1
+517,Prepare presentation,0
+518,Call client,0
+519,Send email,0
+520,Finish report,0
+521,Attend conference,0
+522,Finish report,0
+523,Attend conference,1
+524,Call client,0
+525,Schedule meeting,0
+526,Write blog post,1
+527,Finish report,1
+528,Call client,1
+529,Call client,1
+530,Finish report,0
+531,Attend conference,1
+532,Finish report,1
+533,Write blog post,1
+534,Call client,0
+535,Research topic,1
+536,Research topic,1
+537,Schedule meeting,0
+538,Research topic,0
+539,Schedule meeting,1
+540,Finish report,0
+541,Buy groceries,1
+542,Update website,0
+543,Send email,1
+544,Research topic,1
+545,Send email,0
+546,Buy groceries,0
+547,Call client,1
+548,Prepare presentation,1
+549,Attend conference,1
+550,Write blog post,1
+551,Buy groceries,0
+552,Call client,0
+553,Prepare presentation,0
+554,Call client,0
+555,Schedule meeting,0
+556,Update website,1
+557,Schedule meeting,1
+558,Finish report,0
+559,Attend conference,0
+560,Write blog post,0
+561,Schedule meeting,1
+562,Prepare presentation,0
+563,Finish report,0
+564,Buy groceries,0
+565,Buy groceries,1
+566,Prepare presentation,1
+567,Update website,0
+568,Finish report,0
+569,Schedule meeting,0
+570,Write blog post,1
+571,Send email,0
+572,Research topic,0
+573,Call client,1
+574,Schedule meeting,1
+575,Buy groceries,1
+576,Send email,1
+577,Update website,0
+578,Prepare presentation,0
+579,Research topic,1
+580,Send email,1
+581,Prepare presentation,0
+582,Attend conference,0
+583,Research topic,1
+584,Call client,1
+585,Update website,1
+586,Update website,0
+587,Update website,1
+588,Finish report,0
+589,Buy groceries,0
+590,Prepare presentation,1
+591,Call client,1
+592,Write blog post,1
+593,Write blog post,1
+594,Attend conference,0
+595,Research topic,0
+596,Schedule meeting,0
+597,Prepare presentation,0
+598,Attend conference,1
+599,Prepare presentation,0
+600,Schedule meeting,0
+601,Research topic,1
+602,Update website,1
+603,Finish report,1
+604,Prepare presentation,0
+605,Prepare presentation,1
+606,Research topic,1
+607,Send email,0
+608,Prepare presentation,0
+609,Research topic,1
+610,Write blog post,1
+611,Finish report,1
+612,Schedule meeting,1
+613,Call client,0
+614,Buy groceries,1
+615,Prepare presentation,0
+616,Call client,1
+617,Finish report,1
+618,Write blog post,0
+619,Buy groceries,0
+620,Update website,1
+621,Research topic,0
+622,Schedule meeting,0
+623,Send email,0
+624,Research topic,0
+625,Schedule meeting,0
+626,Call client,0
+627,Buy groceries,1
+628,Schedule meeting,0
+629,Buy groceries,1
+630,Finish report,1
+631,Schedule meeting,1
+632,Research topic,0
+633,Research topic,1
+634,Update website,1
+635,Research topic,0
+636,Buy groceries,0
+637,Research topic,0
+638,Send email,1
+639,Schedule meeting,0
+640,Research topic,0
+641,Call client,0
+642,Research topic,1
+643,Attend conference,0
+644,Buy groceries,0
+645,Update website,0
+646,Prepare presentation,0
+647,Schedule meeting,1
+648,Send email,0
+649,Update website,0
+650,Call client,0
+651,Research topic,0
+652,Schedule meeting,0
+653,Prepare presentation,1
+654,Prepare presentation,1
+655,Schedule meeting,0
+656,Buy groceries,0
+657,Finish report,1
+658,Schedule meeting,0
+659,Write blog post,0
+660,Call client,0
+661,Prepare presentation,0
+662,Send email,1
+663,Attend conference,1
+664,Attend conference,1
+665,Call client,0
+666,Finish report,0
+667,Finish report,0
+668,Buy groceries,0
+669,Write blog post,0
+670,Write blog post,0
+671,Send email,0
+672,Write blog post,0
+673,Buy groceries,1
+674,Research topic,0
+675,Research topic,0
+676,Write blog post,1
+677,Prepare presentation,0
+678,Attend conference,0
+679,Schedule meeting,1
+680,Buy groceries,1
+681,Prepare presentation,1
+682,Schedule meeting,1
+683,Attend conference,1
+684,Prepare presentation,0
+685,Attend conference,0
+686,Research topic,0
+687,Buy groceries,0
+688,Buy groceries,0
+689,Call client,1
+690,Attend conference,1
+691,Send email,0
+692,Call client,1
+693,Prepare presentation,1
+694,Buy groceries,1
+695,Send email,1
+696,Research topic,0
+697,Prepare presentation,0
+698,Call client,0
+699,Attend conference,0
+700,Prepare presentation,0
+701,Schedule meeting,0
+702,Send email,1
+703,Prepare presentation,0
+704,Buy groceries,1
+705,Call client,1
+706,Schedule meeting,0
+707,Finish report,1
+708,Research topic,1
+709,Update website,0
+710,Schedule meeting,0
+711,Finish report,1
+712,Attend conference,1
+713,Write blog post,0
+714,Finish report,1
+715,Schedule meeting,1
+716,Finish report,0
+717,Send email,0
+718,Send email,0
+719,Write blog post,0
+720,Update website,1
+721,Buy groceries,0
+722,Attend conference,0
+723,Schedule meeting,0
+724,Research topic,0
+725,Send email,0
+726,Attend conference,0
+727,Call client,0
+728,Write blog post,0
+729,Call client,0
+730,Write blog post,0
+731,Update website,0
+732,Buy groceries,1
+733,Call client,1
+734,Finish report,1
+735,Update website,1
+736,Buy groceries,0
+737,Update website,0
+738,Schedule meeting,0
+739,Attend conference,0
+740,Send email,1
+741,Attend conference,0
+742,Update website,1
+743,Update website,0
+744,Write blog post,1
+745,Write blog post,1
+746,Call client,0
+747,Call client,0
+748,Buy groceries,1
+749,Buy groceries,1
+750,Write blog post,1
+751,Buy groceries,1
+752,Write blog post,1
+753,Write blog post,0
+754,Prepare presentation,1
+755,Finish report,0
+756,Attend conference,0
+757,Call client,1
+758,Buy groceries,1
+759,Attend conference,0
+760,Research topic,1
+761,Send email,1
+762,Buy groceries,0
+763,Finish report,0
+764,Update website,1
+765,Attend conference,1
+766,Prepare presentation,0
+767,Finish report,1
+768,Update website,0
+769,Research topic,1
+770,Buy groceries,1
+771,Prepare presentation,0
+772,Update website,1
+773,Finish report,1
+774,Write blog post,1
+775,Send email,1
+776,Call client,1
+777,Attend conference,1
+778,Schedule meeting,1
+779,Call client,1
+780,Buy groceries,0
+781,Update website,1
+782,Send email,1
+783,Finish report,1
+784,Research topic,0
+785,Research topic,1
+786,Attend conference,0
+787,Schedule meeting,1
+788,Update website,1
+789,Write blog post,0
+790,Research topic,0
+791,Write blog post,0
+792,Buy groceries,1
+793,Call client,1
+794,Send email,1
+795,Prepare presentation,0
+796,Buy groceries,1
+797,Schedule meeting,1
+798,Schedule meeting,1
+799,Buy groceries,0
+800,Prepare presentation,1
+801,Buy groceries,1
+802,Call client,1
+803,Finish report,0
+804,Finish report,0
+805,Schedule meeting,0
+806,Finish report,1
+807,Finish report,0
+808,Call client,1
+809,Update website,1
+810,Finish report,0
+811,Buy groceries,0
+812,Research topic,0
+813,Finish report,0
+814,Update website,0
+815,Research topic,1
+816,Send email,0
+817,Schedule meeting,0
+818,Send email,0
+819,Attend conference,0
+820,Write blog post,1
+821,Finish report,1
+822,Prepare presentation,1
+823,Call client,0
+824,Schedule meeting,0
+825,Write blog post,1
+826,Send email,1
+827,Write blog post,0
+828,Attend conference,1
+829,Schedule meeting,1
+830,Attend conference,0
+831,Schedule meeting,0
+832,Buy groceries,0
+833,Attend conference,1
+834,Finish report,0
+835,Buy groceries,1
+836,Attend conference,1
+837,Research topic,0
+838,Prepare presentation,1
+839,Update website,0
+840,Schedule meeting,1
+841,Research topic,0
+842,Call client,0
+843,Update website,1
+844,Call client,1
+845,Write blog post,0
+846,Call client,1
+847,Prepare presentation,0
+848,Send email,1
+849,Send email,1
+850,Finish report,1
+851,Send email,1
+852,Prepare presentation,1
+853,Write blog post,1
+854,Buy groceries,0
+855,Schedule meeting,0
+856,Attend conference,0
+857,Buy groceries,1
+858,Send email,1
+859,Attend conference,1
+860,Finish report,0
+861,Research topic,1
+862,Finish report,1
+863,Research topic,1
+864,Send email,0
+865,Finish report,1
+866,Schedule meeting,1
+867,Prepare presentation,1
+868,Update website,0
+869,Attend conference,0
+870,Call client,1
+871,Write blog post,1
+872,Prepare presentation,1
+873,Send email,0
+874,Write blog post,1
+875,Write blog post,0
+876,Schedule meeting,0
+877,Schedule meeting,0
+878,Attend conference,1
+879,Research topic,0
+880,Finish report,1
+881,Prepare presentation,1
+882,Prepare presentation,1
+883,Schedule meeting,1
+884,Attend conference,1
+885,Write blog post,1
+886,Buy groceries,0
+887,Buy groceries,0
+888,Schedule meeting,1
+889,Attend conference,0
+890,Call client,0
+891,Call client,1
+892,Attend conference,0
+893,Buy groceries,1
+894,Attend conference,0
+895,Call client,1
+896,Update website,1
+897,Write blog post,1
+898,Buy groceries,1
+899,Send email,0
+900,Call client,0
+901,Write blog post,1
+902,Call client,1
+903,Schedule meeting,1
+904,Send email,0
+905,Call client,0
+906,Attend conference,1
+907,Write blog post,0
+908,Buy groceries,0
+909,Call client,1
+910,Buy groceries,0
+911,Send email,1
+912,Finish report,1
+913,Attend conference,1
+914,Finish report,0
+915,Buy groceries,1
+916,Prepare presentation,0
+917,Update website,1
+918,Research topic,1
+919,Buy groceries,0
+920,Write blog post,0
+921,Schedule meeting,0
+922,Write blog post,1
+923,Update website,0
+924,Research topic,1
+925,Buy groceries,0
+926,Research topic,0
+927,Research topic,1
+928,Attend conference,0
+929,Buy groceries,0
+930,Update website,0
+931,Prepare presentation,1
+932,Buy groceries,0
+933,Call client,1
+934,Write blog post,0
+935,Send email,1
+936,Prepare presentation,1
+937,Buy groceries,1
+938,Prepare presentation,0
+939,Finish report,0
+940,Schedule meeting,0
+941,Buy groceries,0
+942,Attend conference,1
+943,Send email,1
+944,Call client,1
+945,Update website,0
+946,Write blog post,1
+947,Schedule meeting,1
+948,Call client,0
+949,Write blog post,1
+950,Prepare presentation,1
+951,Write blog post,1
+952,Buy groceries,0
+953,Attend conference,1
+954,Prepare presentation,0
+955,Prepare presentation,0
+956,Schedule meeting,0
+957,Call client,0
+958,Write blog post,1
+959,Call client,0
+960,Research topic,1
+961,Send email,0
+962,Attend conference,0
+963,Send email,0
+964,Prepare presentation,1
+965,Finish report,1
+966,Prepare presentation,0
+967,Write blog post,1
+968,Schedule meeting,1
+969,Buy groceries,0
+970,Research topic,0
+971,Send email,1
+972,Send email,0
+973,Update website,1
+974,Attend conference,0
+975,Buy groceries,0
+976,Update website,1
+977,Schedule meeting,0
+978,Research topic,0
+979,Write blog post,1
+980,Finish report,1
+981,Attend conference,1
+982,Call client,1
+983,Send email,0
+984,Send email,0
+985,Schedule meeting,0
+986,Write blog post,1
+987,Prepare presentation,0
+988,Call client,1
+989,Update website,1
+990,Schedule meeting,1
+991,Schedule meeting,1
+992,Finish report,0
+993,Call client,1
+994,Update website,0
+995,Buy groceries,0
+996,Research topic,0
+997,Prepare presentation,0
+998,Write blog post,1
+999,Finish report,1
+1000,Buy groceries,0

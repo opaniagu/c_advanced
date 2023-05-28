@@ -5,7 +5,7 @@
 #include "c_advanced.h"
 
 // se define aca porque tiene que ser independiente de la implementacion de 'buffer'
-#define BUFFER_LEN 3
+#define BUFFER_LEN 10
 
 int main(void)
 {
@@ -34,11 +34,16 @@ int main(void)
     // if (resultado != EXIT_SUCCESS)
     //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
 
-    // test de 'save'
-    // save(&buffer);
-
-    // test de 'load'
+    // test de 'load' de la base de daos (bin)
     load(&buffer);
+
+    // import
+    import(&buffer);
+
+    buffer_dump(&buffer);
+
+    // test de 'save'
+    save(&buffer);
 
     // creo una nueva tarea, reutilizo estructura 'tarea'
     // tarea.id = 2;

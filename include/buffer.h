@@ -8,6 +8,9 @@
 #include "data.h"
 #include "util.h"
 
+#define FILE_CSV "MOCK_DATA.csv"
+#define FILE_LINE_LEN 200
+
 void bool_to_str(int value_int, char *value_str);
 
 typedef struct
@@ -50,5 +53,7 @@ int buffer_item_id_found(buffer_t *, int);
 void save(buffer_t *);
 
 void load(buffer_t *);
+
+void import(buffer_t *buffer);
 
 #endif
