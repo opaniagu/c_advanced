@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdio_ext.h> // __fpurge()
 
 #include "data.h"
 #include "buffer.h"

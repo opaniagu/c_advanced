@@ -1,0 +1,168 @@
+/**
+ * Compilar: gcc -Wall -Iinclude src/main.c -o bin/main
+ * Ejecutar: ./bin/main
+ **/
+#include "c_advanced.h"
+
+// se define aca porque tiene que ser independiente de la implementacion de 'buffer'
+#define BUFFER_LEN 10
+
+void menu(void);
+void opcion1(void);
+void opcion2(void);
+void opcion3(void);
+
+int main(void)
+{
+    int resultado;
+
+    menu();
+
+    return 0;
+
+    printf("Bienvenidos al curso C Avanzado!\n");
+
+    // configuracion de la app
+    config_t config;
+    config_init(&config);
+    config_print(&config);
+
+    // test de las apis de 'buffer'
+    buffer_t buffer;
+
+    // forma de declarar e inicializar uns struct indicando .campo
+    // ojo que si la estructura ya esta declarada, no se peude igualar un str!
+    data_t tarea = {
+        .id = 1,
+        .title = "Tarea #1",
+        .complete = FALSE,
+    };
+
+    // if (buffer_init(&buffer, BUFFER_LEN))
+    if (buffer_init(&buffer, config.database_size))
+    {
+        printf("Error en la creacion del buffer\n");
+        return -1;
+    }
+
+    // resultado = buffer_create(&buffer, &tarea, asign_data);
+    // if (resultado != EXIT_SUCCESS)
+    //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
+
+    // test de 'load' de la base de daos (bin)
+    load(&buffer, config.database_name);
+
+    // import
+    import(&buffer);
+
+    buffer_dump(&buffer);
+
+    // test de 'save'
+    save(&buffer, config.database_name);
+
+    // creo una nueva tarea, reutilizo estructura 'tarea'
+    // tarea.id = 2;
+    // strcpy(tarea.title, "Tarea #2");
+    // tarea.complete = TRUE;
+    // resultado = buffer_create(&buffer, &tarea);
+    // if (resultado != EXIT_SUCCESS)
+    //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
+
+    // tarea.id = 3;
+    // resultado = buffer_create(&buffer, &tarea);
+    // if (resultado != EXIT_SUCCESS)
+    //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
+
+    // tarea.id = 4;
+    // resultado = buffer_create(&buffer, &tarea); // se descarta, buffer full
+    // if (resultado != EXIT_SUCCESS)
+    //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
+
+    // tarea.id = 5;
+    // resultado = buffer_create(&buffer, &tarea); // se descarta, buffer full
+    // if (resultado != EXIT_SUCCESS)
+    //     printf("Se produjo un error en buffer_create(). Código de error: %d\n", resultado);
+
+    // muestro la lista de tarea
+    buffer_dump(&buffer);
+
+    // test read(find)
+    data_t task;
+    int found;
+
+    found = buffer_read(&buffer, &task, 2);
+    if (found)
+    {
+        data_print(&task);
+    }
+
+    // realizo un update
+    task.complete = FALSE;
+    strcpy(task.title, "Tarea #3");
+    found = buffer_update(&buffer, &task, 3);
+    if (found)
+    {
+        data_print(&task);
+    }
+
+    // elimino id=2
+    buffer_dump(&buffer);
+    buffer_delete(&buffer, 2);
+    buffer_dump(&buffer);
+
+    // libero el buffer
+    buffer_destroy(&buffer);
+
+    return 0;
+}
+
+void menu(void)
+{
+    int opcion;
+    while (1)
+    {
+        printf("==== Menú ====\n");
+        printf("1. Opción 1\n");
+        printf("2. Opción 2\n");
+        printf("3. Opción 3\n");
+        printf("4. Salir\n");
+        printf("Ingrese su opción: ");
+        scanf("%d", &opcion);
+
+        switch (opcion)
+        {
+        case 1:
+            opcion1();
+            break;
+        case 2:
+            opcion2();
+            break;
+        case 3:
+            opcion3();
+            break;
+        case 4:
+            printf("Saliendo del programa...\n");
+            exit(0);
+        default:
+            printf("Opción inválida. Por favor, ingrese un número válido.\n");
+        }
+    }
+}
+
+void opcion1(void)
+{
+    // printf("Ha seleccionado la opción 1.\n");
+    // Realiza las acciones correspondientes a la opción 1
+}
+
+void opcion2(void)
+{
+    printf("Ha seleccionado la opción 2.\n");
+    // Realiza las acciones correspondientes a la opción 2
+}
+
+void opcion3(void)
+{
+    printf("Ha seleccionado la opción 3.\n");
+    // Realiza las acciones correspondientes a la opción 3
+}
